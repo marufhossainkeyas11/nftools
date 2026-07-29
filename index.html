@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFtools — a browser extension you install yourself</title>
+  <meta name="description" content="NFtools is a lightweight browser extension you download and load manually — no web store, no forced updates, nothing running that you didn't approve." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <noscript>
+    <div style="background:#F0A94E;color:#1A1206;padding:0.9rem 1.25rem;text-align:center;font-family:sans-serif;font-size:0.9rem;">
+      এই সাইটের কনটেন্ট JavaScript দিয়ে লোড হয় — সব ঠিকমতো দেখতে ব্রাউজারে JavaScript চালু রাখো।
+    </div>
+  </noscript>
+
+  <!-- ============================ NAVBAR ============================ -->
+  <header class="nav">
+    <div class="container">
+      <a href="#" class="nav-logo" aria-label="NFtools home">
+        <!-- লোগো: content.js-এর brand.logoImage (assets/img/icon.png) থেকে অটো বসে -->
+        <span class="logo-mark" data-brand-logo></span>
+        <span class="text-gradient" data-brand-name>NFtools</span>
+      </a>
+
+      <nav id="nav-links" class="nav-links" aria-label="Primary"></nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary" data-nav-cta>Download</a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================ HERO ============================ -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="hero-copy reveal">
+          <span class="eyebrow hero-eyebrow">MANUAL INSTALL</span>
+          <h1 class="hero-headline text-gradient">You install it. Nobody else does.</h1>
+          <p class="lede hero-sub">NFtools isn't on the Chrome Web Store.</p>
+          <div class="hero-ctas">
+            <a href="#download" class="btn btn-primary hero-primary">
+              Download NFtools
+              <span aria-hidden="true">↓</span>
+            </a>
+            <a href="#how-it-works" class="btn btn-secondary hero-secondary">See how install works</a>
+          </div>
+          <div class="hero-meta"></div>
+        </div>
+
+        <!-- Signature visual: stylized browser toolbar showing the pinned icon + "active" status badge -->
+        <div class="browser-mock reveal" aria-hidden="true">
+          <div class="browser-mock-bar">
+            <div class="browser-mock-dots"><span></span><span></span><span></span></div>
+            <div class="browser-mock-address">
+              <span>🔒</span><span>chrome://extensions</span>
+            </div>
+          </div>
+          <div class="browser-mock-toolbar">
+            <div class="toolbar-icon"></div>
+            <div class="toolbar-icon"></div>
+            <div class="toolbar-icon is-active" data-brand-logo></div>
+          </div>
+          <div class="browser-mock-body">
+            <div class="browser-mock-caption">
+              <span class="dot-live"></span>
+              <span>NFtools — loaded &amp; active</span>
+            </div>
+            <div class="browser-mock-rows">
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY MANUAL INSTALL STRIP ==================== -->
+    <section id="why-manual" aria-labelledby="why-manual-title">
+      <div class="container">
+        <h2 id="why-manual-title" class="reveal" style="font-size:var(--fs-h3); text-align:center; margin-bottom:2.5rem;"></h2>
+        <div id="trust-strip-items" class="trust-strip reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ HOW IT WORKS ============================ -->
+    <section id="how-it-works">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <span class="eyebrow"></span>
+          <h2></h2>
+          <p class="lede"></p>
+        </div>
+        <div id="steps-list" class="steps reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ FEATURES ============================ -->
+    <section id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2></h2>
+          <p class="lede"></p>
+        </div>
+        <div id="features-grid" class="features-grid reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ PERMISSIONS / TRUST ============================ -->
+    <section id="permissions">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2></h2>
+          <p class="lede"></p>
+        </div>
+        <div id="permissions-list" class="permissions-list reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ DOWNLOAD ============================ -->
+    <section id="download">
+      <div class="container">
+        <div class="download-panel reveal">
+          <div class="download-copy">
+            <span class="eyebrow download-eyebrow"></span>
+            <h2 class="download-title"></h2>
+            <p class="lede download-sub"></p>
+            <div class="download-meta"></div>
+            <div class="download-ctas">
+              <a href="#" class="btn btn-primary download-primary">
+                Download
+                <span aria-hidden="true">↓</span>
+              </a>
+              <a href="#" class="btn btn-secondary download-secondary">View source</a>
+            </div>
+          </div>
+          <div class="requirements-box">
+            <h3>Requirements</h3>
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2></h2>
+        </div>
+        <div id="faq-list" class="faq-list reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ CHANGELOG ============================ -->
+    <section id="changelog">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2></h2>
+        </div>
+        <div id="changelog-list" class="changelog-list reveal-stagger"></div>
+      </div>
+    </section>
+
+    <!-- ============================ FINAL CTA ============================ -->
+    <section class="final-cta">
+      <div class="container reveal">
+        <h2>Ready when you are.</h2>
+        <p class="lede">Grab the file, load it into your browser, and it's running in under a minute.</p>
+        <div class="hero-ctas">
+          <a href="#download" class="btn btn-primary">
+            Jump to download
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer id="site-footer" class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" aria-label="NFtools home">
+            <!-- লোগো: content.js থেকে অটো বসে -->
+            <span class="logo-mark" data-brand-logo></span>
+            <span class="text-gradient" data-brand-name>NFtools</span>
+          </a>
+          <p class="footer-tagline"></p>
+        </div>
+        <div class="footer-cols"></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span class="footer-year"></span> <span class="footer-copy-name"></span>. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
