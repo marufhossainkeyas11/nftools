@@ -1,0 +1,13 @@
+এই ফোল্ডারে "icon.png" নামে তোমার এক্সটেনশনের আসল আইকন ফাইলটা রাখো।
+পুরো পাথ হবে: assets/img/icon.png
+
+রাখার পর এই txt ফাইলটা মুছে দিতে পারো — এটা শুধু রিমাইন্ডার হিসেবে রাখা হয়েছে।
+
+কোথায় কোথায় দেখাবে (স্বয়ংক্রিয়ভাবে, ৫ জায়গায়):
+- index.html → top nav
+- index.html → footer
+- index.html → hero-এর browser mockup (toolbar-এ পিন করা আইকন হিসেবে)
+- privacy.html → top nav
+- privacy.html → footer
+
+ফাইলের নাম বদলাতে চাইলে assets/js/content.js-এর brand.logoImage-এ পাথ আপডেট করো।
